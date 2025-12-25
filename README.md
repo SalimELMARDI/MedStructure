@@ -64,10 +64,12 @@ Le tableau ci-dessous détaille les interactions définies comme *Object Propert
 | **Tech. Labo** | `realise` | **Acte Médical** | Exécution d'examens techniques. |
 | **Médecin** | `prescrit` | **Acte Médical** | Ordre de réalisation d'un soin. |
 | **Acte Médical** | `concerne` | **Patient** | Lien entre l'acte et le bénéficiaire. |
+| **Acte Médical** | `necessite` | **Équipement Médical** |Matériel requis pour l'acte.. |
 | **Médecin** | `pose` | **Diagnostic** | Identification de la pathologie. |
 | **Diagnostic** | `est_enregistre_dans` | **Dossier Médical** | Traçabilité de la pathologie. |
 | **Patient** | `possede` | **Dossier Médical** | Propriété du dossier. |
 | **Patient** | `est_admis_dans` | **Service** | Rattachement administratif. |
 | **Patient** | `occupe` | **Chambre** | Localisation physique. |
 | **Chambre** | `est_situe_dans` | **Service** | Hiérarchie spatiale. |
+| **Chambre** | `est_equipe_de` | **Équipement Médical** | Équipements disponibles dans la chambre. |
 | **Service Technique** | `maintient` | **Hôpital** | Gestion globale du bâtiment. |
