@@ -73,3 +73,5 @@ Le tableau ci-dessous détaille les interactions définies comme *Object Propert
 | **Chambre** | `est_situe_dans` | **Service** | Hiérarchie spatiale. |
 | **Chambre** | `est_equipe_de` | **Équipement Médical** | Équipements disponibles dans la chambre. |
 | **Service Technique** | `maintient` | **Hôpital** | Gestion globale du bâtiment. |
+| **Infirmier** | `utilise` | **Équipement Médical** | Usage direct d'un équipement. |
+|**Tech. Biomédical**| `maintient` |**Équipement Médical**| Maintenance et réparation.|
