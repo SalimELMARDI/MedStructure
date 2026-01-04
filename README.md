@@ -62,23 +62,23 @@ Ce concept regroupe les éléments matériels et thérapeutiques nécessaires à
 
 Ce pilier couvre les événements organisationnels et administratifs structurant le parcours du patient au sein de l’établissement.
 
-**Admission Hospitalière**
+ * **Admission Hospitalière**
 
-**Transfert de Service**
+* **Transfert de Service**
 
-**Sortie Hospitalière**
+* **Sortie Hospitalière**
 
-**Rendez-vous Médical**
+* **Rendez-vous Médical**
 
 ### G. Coordination & Organisation des Soins (:Organisation)
 
 Ce concept regroupe les éléments liés à la planification, à la coordination interprofessionnelle et à la continuité des soins.
 
-**Collaboration Inter-Services**
+* **Collaboration Inter-Services**
 
-**Supervision Médicale**
+* **Supervision Médicale**
 
-**Planification des Actes Médicaux** 
+* **Planification des Actes Médicaux** 
 
 ---
 | Concept Source(Domain) | Relation (Verbe) | Concept Cible (Range) | Description |
