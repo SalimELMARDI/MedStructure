@@ -50,6 +50,35 @@ Modélisation des acteurs hospitaliers selon leurs rôles fonctionnels :
 * **Dossier Médical :** Agrégateur d'informations du patient.
 * **Acte Médical :** Action réalisée (chirurgie, analyse, consultation).
 * **Diagnostic :** Conclusion médicale (pathologie).
+### E. Ressources Médicales (:Ressources)
+
+Ce concept regroupe les éléments matériels et thérapeutiques nécessaires à la réalisation des soins et actes médicaux.
+
+* **Équipement Médical :** Dispositifs et matériels utilisés pour les soins et examens.
+
+* **Médicament :** Substance thérapeutique utilisée dans le traitement ou la prévention des pathologies.
+
+### F. Processus Administratifs & Parcours Patient (:Processus)
+
+Ce pilier couvre les événements organisationnels et administratifs structurant le parcours du patient au sein de l’établissement.
+
+**Admission Hospitalière**
+
+**Transfert de Service**
+
+**Sortie Hospitalière**
+
+**Rendez-vous Médical**
+
+### G. Coordination & Organisation des Soins (:Organisation)
+
+Ce concept regroupe les éléments liés à la planification, à la coordination interprofessionnelle et à la continuité des soins.
+
+**Collaboration Inter-Services**
+
+**Supervision Médicale**
+
+**Planification des Actes Médicaux** 
 
 ---
 | Concept Source(Domain) | Relation (Verbe) | Concept Cible (Range) | Description |
