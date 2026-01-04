@@ -24,61 +24,77 @@ Ce diagramme illustre la structure globale de l'ontologie, mettant en évidence 
 
 L'ontologie est structurée autour de quatre piliers principaux :
 
-### A. Hiérarchie du Personnel (`:Personnel`)
+### A. Acteurs du Système Hospitalier (:Acteur)
 
-Modélisation des acteurs hospitaliers selon leurs rôles fonctionnels :
+Ce concept regroupe l’ensemble des entités humaines impliquées dans la prise en charge du patient et le fonctionnement de l’hôpital.
 
-* **Personnel Médical :** Médecins, chirurgiens, pharmaciens et internes responsables du diagnostic et de la prescription.
-* **Personnel Soignant (Paramédical) :** Infirmiers (IDE), aides-soignants, ainsi que les auxiliaires médicaux (kinésithérapeutes, techniciens de laboratoire, manipulateurs radio).
-* **Médico-Technique & Social :** Psychologues et assistants sociaux pour l'accompagnement global.
-* **Administratif & Soutien :** Cadres de santé, agents administratifs, services techniques et agents de nettoyage.
+* **Personnel Médical :** Médecins, chirurgiens, pharmaciens, internes.
 
-### B. Le Patient (`:Patient`)
+* **Personnel Soignant (Paramédical) :** Infirmiers, aides-soignants, kinésithérapeutes, manipulateurs radio, techniciens de laboratoire.
 
-* Entité centrale du système, bénéficiaire des soins et propriétaire des données médicales.
+* **Médico-Technique & Social :** Psychologues, assistants sociaux, techniciens biomédicaux.
 
-### C. Infrastructure & Lieux (`:Infrastructure`)
+* **Administratif & Soutien :** Cadres de santé, agents administratifs, agents de nettoyage, services techniques.
 
-* **Hôpital :** Entité racine.
-* **Service de Soins :** Unité fonctionnelle (ex: Cardiologie).
-* **Chambre Patient :** Lieu d'hébergement.
-* **Laboratoire / Pharmacie :** Lieux techniques.
-* 
+* **Patient :** Personne bénéficiant des soins et au centre du système hospitalier.
 
-### D. Système d'Information (`:Donnees`)
+### B. Structures & Environnements (:Structure)
 
-* **Dossier Médical :** Agrégateur d'informations du patient.
-* **Acte Médical :** Action réalisée (chirurgie, analyse, consultation).
-* **Diagnostic :** Conclusion médicale (pathologie).
-### E. Ressources Médicales (:Ressources)
+Ce pilier regroupe les entités physiques et organisationnelles dans lesquelles se déroulent les activités hospitalières.
 
-Ce concept regroupe les éléments matériels et thérapeutiques nécessaires à la réalisation des soins et actes médicaux.
+* **Hôpital**
 
-* **Équipement Médical :** Dispositifs et matériels utilisés pour les soins et examens.
+* **Service de Soins**
 
-* **Médicament :** Substance thérapeutique utilisée dans le traitement ou la prévention des pathologies.
+* **Chambre Patient**
 
-### F. Processus Administratifs & Parcours Patient (:Processus)
+* **Laboratoire**
 
-Ce pilier couvre les événements organisationnels et administratifs structurant le parcours du patient au sein de l’établissement.
+* **Pharmacie**
 
- * **Admission Hospitalière**
+* **Bloc Opératoire**
 
-* **Transfert de Service**
+### C. Activités & Soins Médicaux (:ActiviteMedicale)
 
-* **Sortie Hospitalière**
+Ce concept couvre l’ensemble des actions cliniques, thérapeutiques et techniques réalisées dans le cadre de la prise en charge du patient.
 
-* **Rendez-vous Médical**
+* **Acte Médical**
 
-### G. Coordination & Organisation des Soins (:Organisation)
+* **Consultation Médicale**
 
-Ce concept regroupe les éléments liés à la planification, à la coordination interprofessionnelle et à la continuité des soins.
+* **Intervention Chirurgicale**
 
-* **Collaboration Inter-Services**
+* **Examen Médical**
 
-* **Supervision Médicale**
+* **Rééducation Fonctionnelle**
 
-* **Planification des Actes Médicaux** 
+### D. Données & Informations Médicales (:Information)
+
+Ce pilier regroupe toutes les entités informationnelles produites, utilisées et conservées durant le parcours de soins.
+
+* **Dossier Médical**
+
+* **Diagnostic**
+
+* **Résultat d’Examen**
+
+* **Compte Rendu Médical**
+
+* **Protocole de Soins**
+ 
+### E. Ressources & Organisation (:Ressource)
+
+Ce concept rassemble les moyens matériels, thérapeutiques et organisationnels nécessaires au fonctionnement hospitalier.
+
+**Équipement Médical** 
+
+* **Médicament**
+
+* **Planification des Actes**
+
+ * **Processus Administratifs (admission, transfert, sortie)**
+
+* **Coordination des Soins**
 
 ---
 | Concept Source(Domain) | Relation (Verbe) | Concept Cible (Range) | Description |
