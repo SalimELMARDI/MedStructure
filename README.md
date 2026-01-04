@@ -43,6 +43,7 @@ Modélisation des acteurs hospitaliers selon leurs rôles fonctionnels :
 * **Service de Soins :** Unité fonctionnelle (ex: Cardiologie).
 * **Chambre Patient :** Lieu d'hébergement.
 * **Laboratoire / Pharmacie :** Lieux techniques.
+* 
 
 ### D. Système d'Information (`:Donnees`)
 
@@ -51,27 +52,48 @@ Modélisation des acteurs hospitaliers selon leurs rôles fonctionnels :
 * **Diagnostic :** Conclusion médicale (pathologie).
 
 ---
+| Concept Source(Domain) | Relation (Verbe) | Concept Cible (Range) | Description |
+|------------------------|------------------|-----------------------|-------------|
+| Médecin    | diagnostique_et_traite | Patient | Relation de soin principale |
+| Infirmier | soigne_et_surveille | Patient | Soins infirmiers quotidiens |
+| Aide-Soignant | assiste_hygiene | Patient | Assistance de vie |
+| Technicien de Laboratoire | realise | Acte Médical | Exécution d'examens techniques |
+| Médecin | prescrit | Acte Médical | Ordre de réalisation d'un soin |
+| Acte Médical | concerne | Patient | Lien entre l'acte et le bénéficiaire |
+| Acte Médical | necessite | Équipement Médical | Matériel requis pour l'acte |
+| Médecin | pose | Diagnostic | Identification de la pathologie |
+| Diagnostic | est_enregistre_dans | Dossier Médical | Traçabilité de la pathologie |
+| Patient | possede | Dossier Médical | Propriété du dossier |
+| Patient | est_admis_dans | Service | Rattachement administratif |
+| Patient | occupe | Chambre | Localisation physique |
+| Chambre | est_situe_dans | Service | Hiérarchie spatiale |
+| Chambre | est_equipe_de | Équipement Médical | Équipements disponibles dans la chambre |
+| Service Technique | maintient | Hôpital | Gestion globale du bâtiment |
+| Infirmier | utilise | Équipement Médical | Usage direct d'un équipement |
+| Technicien Biomédical | maintient | Équipement Médical | Maintenance et réparation |
+| Pharmacien | delivre_medicament_a | Patient | Distribution des traitements prescrits |
+| Pharmacien | valide_prescription_de | Médecin | Contrôle pharmaceutique |
+| Pharmacien | stocke | Médicament | Gestion des stocks médicamenteux |
+| Psychologue | accompagne | Patient | Soutien psychologique |
+| Assistant Social | aide_administrativement | Patient | Accompagnement social et démarches |
+| Cadre de Santé | supervise | Infirmier | Hiérarchie et coordination des soins |
+| Cadre de Santé | gere | Service | Responsabilité organisationnelle |
+| Médecin | consulte | Dossier Médical | Accès aux antécédents du patient |
+| Infirmier | met_a_jour | Dossier Médical | Saisie des observations infirmières |
+| Agent Administratif | enregistre_admission_de | Patient | Gestion des entrées hospitalières |
+| Manipulateur Radio | effectue_imagerie_pour | Patient | Réalisation d'examens radiologiques |
+| Kinésithérapeute | reeduque | Patient | Rééducation fonctionnelle |
+| Chirurgien | opere | Patient | Intervention chirurgicale |
+| Patient | est_transfere_vers | Service | Changement de service médical |
+| Service | collabore_avec | Service | Coordination inter-services |
+| Laboratoire | transmet_resultats_a | Médecin | Communication des analyses |
+| Médecin | demande_consultation_a | Médecin | Avis spécialisé inter-médecins |
+| Interne | est_supervise_par | Médecin | Formation et encadrement médical |
+| Personnel | travaille_dans | Service | Affectation organisationnelle |
+| Acte Médical | est_planifie_dans | Bloc Opératoire | Programmation des interventions |
+| Agent de Nettoyage | entretient | Chambre | Hygiène et désinfection |
+| Hôpital | contient | Service | Structure organisationnelle globale |
+| Dossier Médical | contient | Résultat d'Examen | Centralisation des données cliniques |
+| Médecin | redige | Compte Rendu | Documentation médicale |
+| Patient | beneficie_de | Protocole de Soins | Plan thérapeutique personnalisé |
 
-## 4. Relations Sémantiques (Propriétés)
-
-Le tableau ci-dessous détaille les interactions définies comme *Object Properties* dans l'ontologie.
-
-| Concept Source (Domain) | Relation (Verbe) | Concept Cible (Range) | Description |
-| --- | --- | --- | --- |
-| **Médecin** | `diagnostique_et_traite` | **Patient** | Relation de soin principale. |
-| **Infirmier** | `soigne_et_surveille` | **Patient** | Soins infirmiers quotidiens. |
-| **Aide-Soignant** | `assiste_hygiene` | **Patient** | Assistance de vie. |
-| **Tech. Labo** | `realise` | **Acte Médical** | Exécution d'examens techniques. |
-| **Médecin** | `prescrit` | **Acte Médical** | Ordre de réalisation d'un soin. |
-| **Acte Médical** | `concerne` | **Patient** | Lien entre l'acte et le bénéficiaire. |
-| **Acte Médical** | `necessite` | **Équipement Médical** |Matériel requis pour l'acte.. |
-| **Médecin** | `pose` | **Diagnostic** | Identification de la pathologie. |
-| **Diagnostic** | `est_enregistre_dans` | **Dossier Médical** | Traçabilité de la pathologie. |
-| **Patient** | `possede` | **Dossier Médical** | Propriété du dossier. |
-| **Patient** | `est_admis_dans` | **Service** | Rattachement administratif. |
-| **Patient** | `occupe` | **Chambre** | Localisation physique. |
-| **Chambre** | `est_situe_dans` | **Service** | Hiérarchie spatiale. |
-| **Chambre** | `est_equipe_de` | **Équipement Médical** | Équipements disponibles dans la chambre. |
-| **Service Technique** | `maintient` | **Hôpital** | Gestion globale du bâtiment. |
-| **Infirmier** | `utilise` | **Équipement Médical** | Usage direct d'un équipement. |
-|**Tech. Biomédical**| `maintient` |**Équipement Médical**| Maintenance et réparation.|
