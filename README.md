@@ -54,14 +54,14 @@ Modélisation des acteurs hospitaliers selon leurs rôles fonctionnels :
 ---
 | Concept Source(Domain) | Relation (Verbe) | Concept Cible (Range) | Description |
 |------------------------|------------------|-----------------------|-------------|
-| Médecin    | diagnostique_et_traite | Patient | Relation de soin principale |
-| Infirmier | soigne_et_surveille | Patient | Soins infirmiers quotidiens |
-| Aide-Soignant | assiste_hygiene | Patient | Assistance de vie |
-| Technicien de Laboratoire | realise | Acte Médical | Exécution d'examens techniques |
-| Médecin | prescrit | Acte Médical | Ordre de réalisation d'un soin |
-| Acte Médical | concerne | Patient | Lien entre l'acte et le bénéficiaire |
-| Acte Médical | necessite | Équipement Médical | Matériel requis pour l'acte |
-| Médecin | pose | Diagnostic | Identification de la pathologie |
+| Médecin    | **diagnostique_et_traite** | Patient | Relation de soin principale |
+| Infirmier | **soigne_et_surveille** | Patient | Soins infirmiers quotidiens |
+| Aide-Soignant | **assiste_hygiene** | Patient | Assistance de vie |
+| Technicien de Laboratoire | **realise** | Acte Médical | Exécution d'examens techniques |
+| Médecin | **prescrit** | Acte Médical | Ordre de réalisation d'un soin |
+| Acte Médical | **concerne** | Patient | Lien entre l'acte et le bénéficiaire |
+| Acte Médical | **necessite** | Équipement Médical | Matériel requis pour l'acte |
+| Médecin | pose | **Diagnostic** | Identification de la pathologie |
 | Diagnostic | est_enregistre_dans | Dossier Médical | Traçabilité de la pathologie |
 | Patient | possede | Dossier Médical | Propriété du dossier |
 | Patient | est_admis_dans | Service | Rattachement administratif |
