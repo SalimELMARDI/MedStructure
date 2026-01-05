@@ -97,16 +97,16 @@ Ce concept rassemble les moyens matériels, thérapeutiques et organisationnels 
 * **Coordination des Soins**
 
 ---
-| Concept Source(Domain) | Relation (Verbe) | Concept Cible (Range) | Description |
+| Concept Source (Domain) | Relation (Verbe) | Concept Cible (Range) | Description |
 |------------------------|------------------|-----------------------|-------------|
-| Médecin    | **diagnostique_et_traite** | Patient | Relation de soin principale |
-| Infirmier | **soigne_et_surveille** | Patient | Soins infirmiers quotidiens |
-| Aide-Soignant | **assiste_hygiene** | Patient | Assistance de vie |
-| Technicien de Laboratoire | **realise** | Acte Médical | Exécution d'examens techniques |
-| Médecin | **prescrit** | Acte Médical | Ordre de réalisation d'un soin |
-| Acte Médical | **concerne** | Patient | Lien entre l'acte et le bénéficiaire |
-| Acte Médical | **necessite** | Équipement Médical | Matériel requis pour l'acte |
-| Médecin | pose | **Diagnostic** | Identification de la pathologie |
+| Médecin | diagnostique_et_traite | Patient | Relation de soin principale |
+| Infirmier | soigne_et_surveille | Patient | Soins infirmiers quotidiens |
+| Aide-Soignant | assiste_hygiene | Patient | Assistance de vie |
+| Technicien de Laboratoire | realise | Acte Médical | Exécution d'examens techniques |
+| Médecin | prescrit | Acte Médical | Ordre de réalisation d'un soin |
+| Acte Médical | concerne | Patient | Lien entre l'acte et le bénéficiaire |
+| Acte Médical | necessite | Équipement Médical | Matériel requis pour l'acte |
+| Médecin | pose | Diagnostic | Identification de la pathologie |
 | Diagnostic | est_enregistre_dans | Dossier Médical | Traçabilité de la pathologie |
 | Patient | possede | Dossier Médical | Propriété du dossier |
 | Patient | est_admis_dans | Service | Rattachement administratif |
@@ -141,4 +141,15 @@ Ce concept rassemble les moyens matériels, thérapeutiques et organisationnels 
 | Dossier Médical | contient | Résultat d'Examen | Centralisation des données cliniques |
 | Médecin | redige | Compte Rendu | Documentation médicale |
 | Patient | beneficie_de | Protocole de Soins | Plan thérapeutique personnalisé |
-
+| Consultation Médicale | est_un | Acte Médical | Type d’acte médical basé sur l’échange médecin-patient |
+| Intervention Chirurgicale | est_un | Acte Médical | Acte médical invasif réalisé au bloc opératoire |
+| Examen Médical | est_un | Acte Médical | Acte médical visant à explorer l’état de santé |
+| Médecin | realise | Consultation Médicale | Évaluation clinique et décision thérapeutique |
+| Chirurgien | realise | Intervention Chirurgicale | Acte chirurgical thérapeutique ou diagnostique |
+| Médecin | prescrit | Examen Médical | Demande d’exploration clinique ou paraclinique |
+| Technicien de Laboratoire | realise | Examen Médical | Réalisation d’examens biologiques |
+| Manipulateur Radio | realise | Examen Médical | Réalisation d’examens d’imagerie médicale |
+| Consultation Médicale | concerne | Patient | Le patient est bénéficiaire de la consultation |
+| Intervention Chirurgicale | concerne | Patient | Le patient est sujet de l’acte chirurgical |
+| Examen Médical | produit | Résultat d'Examen | Génération de données cliniques |
+| Intervention Chirurgicale | necessite | Bloc Opératoire | Lieu spécialisé pour l’acte chirurgical |
