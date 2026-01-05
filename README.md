@@ -167,4 +167,6 @@ Ce concept rassemble les moyens matériels, thérapeutiques et organisationnels 
 | Coordination des Soins | implique | Personnel Médical | Collaboration médicale |
 | Coordination des Soins | implique | Personnel Soignant | Continuité des soins |
 | Coordination des Soins | relie | Service | Coopération inter-services |
+|Équipement Médical |	est_utilise_pour |	Acte Médical |	Support matériel des soins |
+|Technicien Biomédical |	planifie_maintenance_de	| Équipement | Médical	Maintenance préventive |
 
