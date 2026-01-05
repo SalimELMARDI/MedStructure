@@ -106,57 +106,65 @@ Ce concept rassemble les moyens matériels, thérapeutiques et organisationnels 
 | Médecin | prescrit | Acte Médical | Ordre de réalisation d'un soin |
 | Acte Médical | concerne | Patient | Lien entre l'acte et le bénéficiaire |
 | Acte Médical | necessite | Équipement Médical | Matériel requis pour l'acte |
+| Acte Médical | est_realise_par | Personnel | Exécutant de l’acte médical |
+| Acte Médical | est_enregistre_dans | Dossier Médical | Traçabilité de l’acte |
+| Acte Médical | se_deroule_dans | Service | Lieu de réalisation |
+| Acte Médical | produit | Résultat d'Examen | Résultat clinique généré |
 | Médecin | pose | Diagnostic | Identification de la pathologie |
 | Diagnostic | est_enregistre_dans | Dossier Médical | Traçabilité de la pathologie |
 | Patient | possede | Dossier Médical | Propriété du dossier |
 | Patient | est_admis_dans | Service | Rattachement administratif |
 | Patient | occupe | Chambre | Localisation physique |
 | Chambre | est_situe_dans | Service | Hiérarchie spatiale |
-| Chambre | est_equipe_de | Équipement Médical | Équipements disponibles dans la chambre |
+| Chambre | est_equipe_de | Équipement Médical | Équipements disponibles |
 | Service Technique | maintient | Hôpital | Gestion globale du bâtiment |
 | Infirmier | utilise | Équipement Médical | Usage direct d'un équipement |
 | Technicien Biomédical | maintient | Équipement Médical | Maintenance et réparation |
-| Pharmacien | delivre_medicament_a | Patient | Distribution des traitements prescrits |
+| Pharmacien | delivre_medicament_a | Patient | Distribution des traitements |
 | Pharmacien | valide_prescription_de | Médecin | Contrôle pharmaceutique |
-| Pharmacien | stocke | Médicament | Gestion des stocks médicamenteux |
+| Pharmacien | stocke | Médicament | Gestion des stocks |
 | Psychologue | accompagne | Patient | Soutien psychologique |
-| Assistant Social | aide_administrativement | Patient | Accompagnement social et démarches |
-| Cadre de Santé | supervise | Infirmier | Hiérarchie et coordination des soins |
+| Assistant Social | aide_administrativement | Patient | Accompagnement social |
+| Cadre de Santé | supervise | Infirmier | Coordination des soins |
 | Cadre de Santé | gere | Service | Responsabilité organisationnelle |
-| Médecin | consulte | Dossier Médical | Accès aux antécédents du patient |
-| Infirmier | met_a_jour | Dossier Médical | Saisie des observations infirmières |
-| Agent Administratif | enregistre_admission_de | Patient | Gestion des entrées hospitalières |
-| Manipulateur Radio | effectue_imagerie_pour | Patient | Réalisation d'examens radiologiques |
+| Médecin | consulte | Dossier Médical | Accès aux antécédents |
+| Infirmier | met_a_jour | Dossier Médical | Observations infirmières |
+| Agent Administratif | enregistre_admission_de | Patient | Gestion des admissions |
+| Manipulateur Radio | effectue_imagerie_pour | Patient | Examens radiologiques |
 | Kinésithérapeute | reeduque | Patient | Rééducation fonctionnelle |
 | Chirurgien | opere | Patient | Intervention chirurgicale |
-| Patient | est_transfere_vers | Service | Changement de service médical |
+| Patient | est_transfere_vers | Service | Changement de service |
 | Service | collabore_avec | Service | Coordination inter-services |
 | Laboratoire | transmet_resultats_a | Médecin | Communication des analyses |
-| Médecin | demande_consultation_a | Médecin | Avis spécialisé inter-médecins |
-| Interne | est_supervise_par | Médecin | Formation et encadrement médical |
+| Médecin | demande_consultation_a | Médecin | Avis spécialisé |
+| Interne | est_supervise_par | Médecin | Encadrement médical |
 | Personnel | travaille_dans | Service | Affectation organisationnelle |
-| Acte Médical | est_planifie_dans | Bloc Opératoire | Programmation des interventions |
+| Acte Médical | est_planifie_dans | Bloc Opératoire | Programmation |
 | Agent de Nettoyage | entretient | Chambre | Hygiène et désinfection |
-| Hôpital | contient | Service | Structure organisationnelle globale |
-| Dossier Médical | contient | Résultat d'Examen | Centralisation des données cliniques |
+| Hôpital | contient | Service | Structure globale |
+| Dossier Médical | contient | Résultat d'Examen | Centralisation des données |
 | Médecin | redige | Compte Rendu | Documentation médicale |
-| Patient | beneficie_de | Protocole de Soins | Plan thérapeutique personnalisé |
-| Consultation Médicale | est_un | Acte Médical | Type d’acte médical basé sur l’échange médecin-patient |
-| Intervention Chirurgicale | est_un | Acte Médical | Acte médical invasif réalisé au bloc opératoire |
-| Examen Médical | est_un | Acte Médical | Acte médical visant à explorer l’état de santé |
-| Médecin | realise | Consultation Médicale | Évaluation clinique et décision thérapeutique |
-| Chirurgien | realise | Intervention Chirurgicale | Acte chirurgical thérapeutique ou diagnostique |
-| Médecin | prescrit | Examen Médical | Demande d’exploration clinique ou paraclinique |
-| Technicien de Laboratoire | realise | Examen Médical | Réalisation d’examens biologiques |
-| Manipulateur Radio | realise | Examen Médical | Réalisation d’examens d’imagerie médicale |
-| Consultation Médicale | concerne | Patient | Le patient est bénéficiaire de la consultation |
-| Intervention Chirurgicale | concerne | Patient | Le patient est sujet de l’acte chirurgical |
-| Examen Médical | produit | Résultat d'Examen | Génération de données cliniques |
-| Intervention Chirurgicale | necessite | Bloc Opératoire | Lieu spécialisé pour l’acte chirurgical |
-| Processus Administratif |**gere**| Admission | Prise en charge administrative initiale |
-| Processus Administratif |**gere**| Transfert | Changement de service du patient |
-| Processus Administratif |**gere**| Sortie | Fin de l’hospitalisation |
-| Planification des Actes |**coordonne**| Acte Médical | Ordonnancement des interventions |
-|Coordination des Soins|**implique**|	Personnel | Médical |	Collaboration | médicale
-Coordination des Soins	implique	Personnel Soignant	Continuité des soins
-Coordination des Soins	relie	Service	Coopération inter-services
+| Patient | beneficie_de | Protocole de Soins | Plan thérapeutique |
+| Consultation Médicale | est_un | Acte Médical | Acte clinique non invasif |
+| Consultation Médicale | concerne | Patient | Patient consulté |
+| Consultation Médicale | est_realisee_par | Médecin | Réalisation médicale |
+| Consultation Médicale | aboutit_a | Diagnostic | Résultat clinique |
+| Intervention Chirurgicale | est_un | Acte Médical | Acte invasif |
+| Intervention Chirurgicale | concerne | Patient | Patient opéré |
+| Intervention Chirurgicale | est_realisee_par | Chirurgien | Responsable opératoire |
+| Intervention Chirurgicale | necessite | Bloc Opératoire | Lieu spécialisé |
+| Intervention Chirurgicale | produit | Compte Rendu | Trace opératoire |
+| Examen Médical | est_un | Acte Médical | Acte exploratoire |
+| Examen Médical | est_prescrit_par | Médecin | Décision médicale |
+| Examen Médical | est_realise_par | Personnel Médical | Réalisation technique |
+| Examen Médical | utilise | Équipement Médical | Matériel diagnostique |
+| Examen Médical | produit | Résultat d'Examen | Données cliniques |
+| Examen Médical | est_archive_dans | Dossier Médical | Conservation des résultats |
+| Processus Administratif | gere | Admission | Prise en charge initiale |
+| Processus Administratif | gere | Transfert | Changement de service |
+| Processus Administratif | gere | Sortie | Fin d’hospitalisation |
+| Planification des Actes | coordonne | Acte Médical | Ordonnancement |
+| Coordination des Soins | implique | Personnel Médical | Collaboration médicale |
+| Coordination des Soins | implique | Personnel Soignant | Continuité des soins |
+| Coordination des Soins | relie | Service | Coopération inter-services |
+
