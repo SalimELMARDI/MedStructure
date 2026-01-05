@@ -177,5 +177,6 @@ Ce concept rassemble les moyens matériels, thérapeutiques et organisationnels 
 | Coordination des Soins | implique | Personnel Soignant | Continuité des soins |
 | Coordination des Soins | relie | Service | Coopération inter-services |
 |Équipement Médical |	est_utilise_pour |	Acte Médical |	Support matériel des soins |
+|Médicament |	est_stocke_dans	| Pharmacie | Lieu de conservation des médicaments |
+|Pharmacien |	gere_stock_de	| Médicament | Gestion quantitative et qualitative |
 |Technicien Biomédical |	planifie_maintenance_de	| Équipement | Médical	Maintenance préventive |
-
