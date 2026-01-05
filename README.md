@@ -153,3 +153,10 @@ Ce concept rassemble les moyens matériels, thérapeutiques et organisationnels 
 | Intervention Chirurgicale | concerne | Patient | Le patient est sujet de l’acte chirurgical |
 | Examen Médical | produit | Résultat d'Examen | Génération de données cliniques |
 | Intervention Chirurgicale | necessite | Bloc Opératoire | Lieu spécialisé pour l’acte chirurgical |
+| Processus Administratif |**gere**| Admission | Prise en charge administrative initiale |
+| Processus Administratif |**gere**| Transfert | Changement de service du patient |
+| Processus Administratif |**gere**| Sortie | Fin de l’hospitalisation |
+| Planification des Actes |**coordonne**| Acte Médical | Ordonnancement des interventions |
+|Coordination des Soins|**implique**|	Personnel | Médical |	Collaboration | médicale
+Coordination des Soins	implique	Personnel Soignant	Continuité des soins
+Coordination des Soins	relie	Service	Coopération inter-services
