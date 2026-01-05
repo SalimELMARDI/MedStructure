@@ -104,6 +104,15 @@ Ce concept rassemble les moyens matériels, thérapeutiques et organisationnels 
 | Aide-Soignant | assiste_hygiene | Patient | Assistance de vie |
 | Technicien de Laboratoire | realise | Acte Médical | Exécution d'examens techniques |
 | Médecin | prescrit | Acte Médical | Ordre de réalisation d'un soin |
+| Médecin | suit | Patient | Suivi médical du patient |
+| Infirmier | assiste | Médecin | Assistance lors des actes médicaux |
+| Aide-Soignant | accompagne | Patient | Accompagnement du patient au quotidien |
+| Personnel Médico-Technique | utilise | Équipement Médical | Utilisation des équipements techniques |
+| Personnel Médico-Technique | produit | Résultat d’Examen | Production des résultats d’examens |
+| Personnel Administratif | admet | Patient | Admission administrative du patient |
+| Personnel Administratif | gère | Dossier Médical | Gestion administrative du dossier |
+| Personnel Administratif | planifie | Consultation Médicale | Planification des rendez-vous |
+| Patient | est_pris_en_charge_par | Personnel Soignant | Prise en charge soignante |
 | Acte Médical | concerne | Patient | Lien entre l'acte et le bénéficiaire |
 | Acte Médical | necessite | Équipement Médical | Matériel requis pour l'acte |
 | Acte Médical | est_realise_par | Personnel | Exécutant de l’acte médical |
